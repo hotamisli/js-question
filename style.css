@@ -1,0 +1,13 @@
+body,
+html {
+    height: 100%;
+}
+
+.container-fluid {
+    height: 10vh;
+    background-color: rgb(236, 236, 236);
+}
+
+.row .card {
+    height: 50vh;
+}
