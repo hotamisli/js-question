@@ -1,7 +1,7 @@
 function selected() {
     var continent = document.getElementsByName('continent')
 
-    for (var i = 0; i < length.continent; i++) {
+    for (var i = 0; i < continent.length; i++) {
         if (continent[i].checked) {
 
             if (continent[i].value != '7') {
