@@ -8,58 +8,43 @@
     <title>Answer the Question</title>
 
     <!-- style -->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <!-- <h3>Answer The Question</h3> -->
-        </div>
-    </div>
+    <section>
+        <form name="quiz">
+            <h4>1. Capital city of Nigeria?</h4>
+            <input type="radio" name="question1" value="a" id="q1a"> a.Lagos <br>
+            <input type="radio" name="question1" value="b" id="q1b"> b. Abuja<br>
+            <input type="radio" name="question1" value="c" id="q1c"> c.Katsina <br>
 
-    <div class="container">
-        <div class="row mt-5">
-            <h3>Answer the Question</h3>
-        </div>
-    </div>
+            <h4>2. Capital city of Ghana?</h4>
+            <input type="radio" name="question2" value="a" id="q2a"> a. Accra <br>
+            <input type="radio" name="question2" value="b" id="q2b"> b. Kumasi<br>
+            <input type="radio" name="question2" value="c" id="q2c"> c. Cape Coast<br>
 
-    <div class="card col-5 h-50 mt-5">
-        <div class="card-body">
-            <div class="col-12 text-center">
-                <div class="col-12 mt-5">
-                    <p>How many continent are there?</p>
-                    <div class="col">
-                        <form>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="5" name="continent">
-                                <label class="form-check-label" for="5"> 5</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="6" name="continent">
-                                <label class="form-check-label" for="6">6</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="7" name="continent">
-                                <label class="form-check-label" for="7">7</label>
-                            </div>
-                            <input type="submit" onclick="selected()" value="submit">
-                        </form>
+            <h4>3. Capital city of Turkey?</h4>
+            <input type="radio" name="question3" value="a" id="q3a"> a. Istanbul<br>
+            <input type="radio" name="question3" value="b" id="q3b"> b. Ankara <br>
+            <input type="radio" name="question3" value="c" id="q3c"> c. Izmir<br>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <h4>4.Capital city of South Korea?</h4>
+            <input type="radio" name="question4" value="a" id="q4a"> a. Seul<br>
+            <input type="radio" name="question4" value="b" id="q4b"> b. Busan<br>
+            <input type="radio" name="question4" value="c" id="q4c"> c. Suwan<br>
 
 
+            <h4>5. Capital city of England?</h4>
+            <input type="radio" name="question5" value="a" id="q5a">a.Manchester <br>
+            <input type="radio" name="question5" value="b" id="q5b">b.Arsenal<br>
+            <input type="radio" name="question5" value="c" id="q5c">c.London<br>
+            <br><br>
+            <input type="submit" onclick="quizSubmit()" value="Submit Answers">
+        </form>
+    </section>
     <!-- script -->
     <script src="main.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>
