@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: #f8f8f8 !important;
+    /* background-color: #ecebeb; */
+    /* background-color: rgb(231, 227, 227); */
+    height: 100%;
+}
+
+.uk-container-small {
+    background-color: #FFF;
+}
+
+.uk-container.uk-container-small {
+    margin-top: 2%;
+}
+
+form.uk-grid-small {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

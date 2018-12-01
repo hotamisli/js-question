@@ -8,43 +8,56 @@
     <title>Answer the Question</title>
 
     <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+
 </head>
 
 <body>
-    <section>
-        <form name="quiz">
-            <h4>1. Capital city of Nigeria?</h4>
-            <input type="radio" name="question1" value="a" id="q1a"> a.Lagos <br>
-            <input type="radio" name="question1" value="b" id="q1b"> b. Abuja<br>
-            <input type="radio" name="question1" value="c" id="q1c"> c.Katsina <br>
 
-            <h4>2. Capital city of Ghana?</h4>
-            <input type="radio" name="question2" value="a" id="q2a"> a. Accra <br>
-            <input type="radio" name="question2" value="b" id="q2b"> b. Kumasi<br>
-            <input type="radio" name="question2" value="c" id="q2c"> c. Cape Coast<br>
-
-            <h4>3. Capital city of Turkey?</h4>
-            <input type="radio" name="question3" value="a" id="q3a"> a. Istanbul<br>
-            <input type="radio" name="question3" value="b" id="q3b"> b. Ankara <br>
-            <input type="radio" name="question3" value="c" id="q3c"> c. Izmir<br>
-
-            <h4>4.Capital city of South Korea?</h4>
-            <input type="radio" name="question4" value="a" id="q4a"> a. Seul<br>
-            <input type="radio" name="question4" value="b" id="q4b"> b. Busan<br>
-            <input type="radio" name="question4" value="c" id="q4c"> c. Suwan<br>
-
-
-            <h4>5. Capital city of England?</h4>
-            <input type="radio" name="question5" value="a" id="q5a">a.Manchester <br>
-            <input type="radio" name="question5" value="b" id="q5b">b.Arsenal<br>
-            <input type="radio" name="question5" value="c" id="q5c">c.London<br>
-            <br><br>
-            <input type="submit" onclick="quizSubmit()" value="Submit Answers">
+    <div class="uk-container uk-container-small uk-box-shadow-medium">
+        <form class="uk-grid-small uk-flex uk-flex-center uk-text-center" name="quiz" uk-grid>
+            <h3 class="uk-text-bold">Answer the Questions</h3>
+            <div class="uk-width-1-1">
+                <h4>1. Capital city of Nigeria?</h4>
+                <input class="uk-radio" type="radio" name="question1" value="a" id="q1a"> a.Lagos <br>
+                <input class="uk-radio" type="radio" name="question1" value="b" id="q1b"> b. Abuja<br>
+                <input class="uk-radio" type="radio" name="question1" value="c" id="q1c"> c.Katsina <br>
+            </div>
+            <div class="uk-width-1-1">
+                <h4>2. Capital city of Ghana?</h4>
+                <input class="uk-radio" type="radio" name="question2" value="a" id="q2a"> a. Accra <br>
+                <input class="uk-radio" type="radio" name="question2" value="b" id="q2b"> b. Kumasi<br>
+                <input class="uk-radio" type="radio" name="question2" value="c" id="q2c"> c. Cape Coast<br>
+            </div>
+            <div class="uk-width-1-1">
+                <h4>3. Capital city of Turkey?</h4>
+                <input class="uk-radio" type="radio" name="question3" value="a" id="q3a"> a. Istanbul<br>
+                <input class="uk-radio" type="radio" name="question3" value="b" id="q3b"> b. Ankara <br>
+                <input class="uk-radio" type="radio" name="question3" value="c" id="q3c"> c. Izmir<br>
+            </div>
+            <div class="uk-width-1-1">
+                <h4>4.Capital city of South Korea?</h4>
+                <input class="uk-radio" type="radio" name="question4" value="a" id="q4a"> a. Seul<br>
+                <input class="uk-radio" type="radio" name="question4" value="b" id="q4b"> b. Busan<br>
+                <input class="uk-radio" type="radio" name="question4" value="c" id="q4c"> c. Suwan<br>
+            </div>
+            <div class="uk-width-1-1">
+                <h4>5. Capital city of England?</h4>
+                <input class="uk-radio" type="radio" name="question5" value="a" id="q5a">a.Manchester <br>
+                <input class="uk-radio" type="radio" name="question5" value="b" id="q5b">b.Arsenal<br>
+                <input class="uk-radio" type="radio" name="question5" value="c" id="q5c">c.London<br>
+            </div>
+            <div class="uk-witdh-1-1">
+                <input class="uk-button uk-button-primary" type="submit" onclick="quizSubmit()" value="Submit Answers">
+            </div>
         </form>
-    </section>
+    </div>
     <!-- script -->
-    <script src="main.js"></script>
 
+    <script src="js/main.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
 </body>
 
 </html>
