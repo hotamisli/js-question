@@ -32,16 +32,15 @@ function quizSubmit() {
             wrongAnswer++;
         }
     }
-    /*
-        document.write('You got ' + correct + ' correct answer(s) and ' + wrongAnswer + "wrong answer(s) and you didn't attempt " + unAnsweredQuestion + " questions.")
 
-        */
+    document.write('You got ' + correct + ' correct answer(s) and ' + wrongAnswer + "wrong answer(s) and you didn't attempt " + unAnsweredQuestion + " questions.")
 
-    document.getElementById('report').style.visibility = 'visible';
-    // document.getElementsByClassName('uk-input').style.visibility = 'visible';
-    document.getElementById('correct').value = "You got " + correct + " correct.";
-    document.getElementById('wrong').value = "You got " + wrongAnswer + " correct.";
-    document.getElementById('empty').value = "You got " + unAnsweredQuestion + " correct.";
+
+
+    // // document.getElementsByClassName('uk-input').style.visibility = 'visible';
+    // document.getElementById('correct').value = "You got " + correct + " correct.";
+    // document.getElementById('wrong').value = "You got " + wrongAnswer + " correct.";
+    // document.getElementById('empty').value = "You got " + unAnsweredQuestion + " correct.";
 
     return false;
 }
