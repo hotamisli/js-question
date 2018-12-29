@@ -1,22 +1,16 @@
-// function selected() {
-//     var continent = document.getElementsByName('continent')
-
-//     for (var i = 0; i < continent.length; i++) {
-//         if (continent[i].checked) {
-
-//             if (continent[i].value != '7') {
-//                 alert('it is wrong')
-//             } else {
-//                 alert("Answer is correct!");
-//             }
-//             break;
-//         }
-
-//     }
+//redirect page on click
+// var submit = document.getElementById('submit');
+// if (submit) {
+//     submit.addEventListener('click', () => {
+//         window.location.href = 'result.html'
+//     })
 // }
 
 function quizSubmit() {
     var total = 5;
+    var wrongAnswer = 0;
+    var correct = 0;
+    var unAnsweredQuestion = 0;
 
     //Get selected elements from the form 
     var question1 = document.forms["quiz"]["question1"].value;
@@ -25,28 +19,29 @@ function quizSubmit() {
     var question4 = document.forms["quiz"]["question4"].value;
     var question5 = document.forms["quiz"]["question5"].value;
 
-    // check empty submission
-    for (var i = 1; i <= total; i++) {
-        if (eval('question' + i) == null || eval('question' + i) == '') {
-            alert("answer all questions ");
-            return false;
-        }
-    }
-
     //answers
     var answers = ["b", "a", "b", "a", "c"]
 
-    //check answers
+    // check submissions
     for (var i = 1; i <= total; i++) {
-        //question numbers
-        var questions = [1, 2, 3, 4, 5]
-            //alert user if answer is correct or not
-        if (eval('question' + i) == answers[i - 1]) {
-            alert("Question " + questions[i - 1] + " is correct")
+        if (eval('question' + i) == null || eval('question' + i) == '') {
+            unAnsweredQuestion++
+        } else if (eval('question' + i) == answers[i - 1]) {
+            correct++
         } else {
-            alert('Question ' + questions[i - 1] + ' is not correct. Correct answer is ' + answers[i - 1])
+            wrongAnswer++;
         }
     }
+    /*
+        document.write('You got ' + correct + ' correct answer(s) and ' + wrongAnswer + "wrong answer(s) and you didn't attempt " + unAnsweredQuestion + " questions.")
+
+        */
+
+    document.getElementById('report').style.visibility = 'visible';
+    // document.getElementsByClassName('uk-input').style.visibility = 'visible';
+    document.getElementById('correct').value = "You got " + correct + " correct.";
+    document.getElementById('wrong').value = "You got " + wrongAnswer + " correct.";
+    document.getElementById('empty').value = "You got " + unAnsweredQuestion + " correct.";
 
     return false;
 }

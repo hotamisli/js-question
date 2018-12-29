@@ -16,48 +16,82 @@
 <body>
 
     <div class="uk-container uk-container-small uk-box-shadow-medium">
-        <form class="uk-grid-small uk-flex uk-flex-center uk-text-center" name="quiz" uk-grid>
+        <form class="uk-grid-small uk-flex uk-flex-center uk-text-center" method="GET" action="" name="quiz" uk-grid>
             <h3 class="uk-text-bold">Answer the Questions</h3>
             <div class="uk-width-1-1">
                 <h4>1. Capital city of Nigeria?</h4>
-                <input class="uk-radio" type="radio" name="question1" value="a" id="q1a"> a.Lagos <br>
-                <input class="uk-radio" type="radio" name="question1" value="b" id="q1b"> b. Abuja<br>
-                <input class="uk-radio" type="radio" name="question1" value="c" id="q1c"> c.Katsina <br>
+                <input class="uk-radio" class="choice" type="radio" name="question1" value="a" id="q1a"> a.Lagos <br>
+                <input class="uk-radio" class="choice" type="radio" name="question1" value="b" id="q1b"> b. Abuja<br>
+                <input class="uk-radio" class="choice" type="radio" name="question1" value="c" id="q1c"> c.Katsina <br>
             </div>
             <div class="uk-width-1-1">
                 <h4>2. Capital city of Ghana?</h4>
-                <input class="uk-radio" type="radio" name="question2" value="a" id="q2a"> a. Accra <br>
-                <input class="uk-radio" type="radio" name="question2" value="b" id="q2b"> b. Kumasi<br>
-                <input class="uk-radio" type="radio" name="question2" value="c" id="q2c"> c. Cape Coast<br>
+                <input class="uk-radio" class="choice" type="radio" name="question2" value="a" id="q2a"> a. Accra <br>
+                <input class="uk-radio" class="choice" type="radio" name="question2" value="b" id="q2b"> b. Kumasi<br>
+                <input class="uk-radio" class="choice" type="radio" name="question2" value="c" id="q2c"> c. Cape Coast<br>
             </div>
             <div class="uk-width-1-1">
                 <h4>3. Capital city of Turkey?</h4>
-                <input class="uk-radio" type="radio" name="question3" value="a" id="q3a"> a. Istanbul<br>
-                <input class="uk-radio" type="radio" name="question3" value="b" id="q3b"> b. Ankara <br>
-                <input class="uk-radio" type="radio" name="question3" value="c" id="q3c"> c. Izmir<br>
+                <input class="uk-radio" class="choice" type="radio" name="question3" value="a" id="q3a"> a. Istanbul<br>
+                <input class="uk-radio" class="choice" type="radio" name="question3" value="b" id="q3b"> b. Ankara <br>
+                <input class="uk-radio" class="choice" type="radio" name="question3" value="c" id="q3c"> c. Izmir<br>
             </div>
             <div class="uk-width-1-1">
                 <h4>4.Capital city of South Korea?</h4>
-                <input class="uk-radio" type="radio" name="question4" value="a" id="q4a"> a. Seul<br>
-                <input class="uk-radio" type="radio" name="question4" value="b" id="q4b"> b. Busan<br>
-                <input class="uk-radio" type="radio" name="question4" value="c" id="q4c"> c. Suwan<br>
+                <input class="uk-radio" class="choice" type="radio" name="question4" value="a" id="q4a"> a. Seul<br>
+                <input class="uk-radio" class="choice" type="radio" name="question4" value="b" id="q4b"> b. Busan<br>
+                <input class="uk-radio" class="choice" type="radio" name="question4" value="c" id="q4c"> c. Suwan<br>
             </div>
             <div class="uk-width-1-1">
                 <h4>5. Capital city of England?</h4>
-                <input class="uk-radio" type="radio" name="question5" value="a" id="q5a">a.Manchester <br>
-                <input class="uk-radio" type="radio" name="question5" value="b" id="q5b">b.Arsenal<br>
-                <input class="uk-radio" type="radio" name="question5" value="c" id="q5c">c.London<br>
+                <input class="uk-radio" class="choice" type="radio" name="question5" value="a" id="q5a">a.Manchester <br>
+                <input class="uk-radio" class="choice" type="radio" name="question5" value="b" id="q5b">b.Arsenal<br>
+                <input class="uk-radio" class="choice" type="radio" name="question5" value="c" id="q5c">c.London<br>
             </div>
             <div class="uk-witdh-1-1">
-                <input class="uk-button uk-button-primary" type="submit" onclick="quizSubmit()" value="Submit Answers">
+                <input class="uk-button uk-button-primary" onclick="quizSubmit()" id="submit" type="button" value="Submit Answers">
             </div>
         </form>
     </div>
+
+    <div id="report" class="uk-container uk-container-small uk-box-shadow-large">
+        <form class="uk-form-horizontal uk-grid-small" uk-grid>
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-text">Correct</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="correct" type="hidden">
+                </div>
+            </div>
+
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-select">Wrong</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="wrong" type="hidden">
+                </div>
+            </div>
+
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-select">Not Attempted</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="empty" type="hidden">
+                </div>
+            </div>
+            <div class="uk-margin uk-witdh-1-1 ">
+                <a href="index.html"><input class="uk-button uk-button-primary " id="testAgain " type="button " value="Take the Test Again "></a>
+            </div>
+        </form>
+    </div>
+    <!-- <div id="report ">
+        <p id="correct "></p>
+        <p id="wrong "></p>
+        <p id="empty "></p>
+    </div> -->
     <!-- script -->
 
-    <script src="js/main.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
+
+    <script src="js/main.js "></script>
+    <script src="js/uikit.min.js "></script>
+    <script src="js/uikit-icons.min.js "></script>
 </body>
 
 </html>

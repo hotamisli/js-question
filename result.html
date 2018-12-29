@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Result Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+
+</head>
+
+<body>
+    <div id="report" class="uk-container uk-container-small uk-box-shadow-large">
+        <form class="uk-form-horizontal uk-grid-small" uk-grid>
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-text">Correct</label>
+                <div class="uk-form-controls">
+                    <input id="correct" class="uk-input" type="text">
+                </div>
+            </div>
+
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-select">Wrong</label>
+                <div class="uk-form-controls">
+                    <input id="wrong" class="uk-input" type="text">
+                </div>
+            </div>
+
+            <div class="uk-margin uk-width-2-3">
+                <label class="uk-form-label" for="form-horizontal-select">Not Attempted</label>
+                <div class="uk-form-controls">
+                    <input id="empty" class="uk-input" type="text">
+                </div>
+            </div>
+            <div class="uk-margin uk-witdh-1-1">
+                <a href="index.html"><input class="uk-button uk-button-primary" id="testAgain" type="button" value="Take the Test Again"></a>
+            </div>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+</body>
+
+</html>
