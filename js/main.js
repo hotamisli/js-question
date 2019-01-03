@@ -1,16 +1,9 @@
-//redirect page on click
-// var submit = document.getElementById('submit');
-// if (submit) {
-//     submit.addEventListener('click', () => {
-//         window.location.href = 'result.html'
-//     })
-// }
-
 function quizSubmit() {
     var total = 5;
-    var wrongAnswer = 0;
-    var correct = 0;
-    var unAnsweredQuestion = 0;
+    var score = 0;
+    var wrong = 0;
+    var empty = 0;
+    var answers = ["b", "a", "b", "a", "c"]
 
     //Get selected elements from the form 
     var question1 = document.forms["quiz"]["question1"].value;
@@ -19,28 +12,29 @@ function quizSubmit() {
     var question4 = document.forms["quiz"]["question4"].value;
     var question5 = document.forms["quiz"]["question5"].value;
 
-    //answers
-    var answers = ["b", "a", "b", "a", "c"]
 
     // check submissions
     for (var i = 1; i <= total; i++) {
         if (eval('question' + i) == null || eval('question' + i) == '') {
-            unAnsweredQuestion++
+            empty++
+            // console.log('you got empty')
         } else if (eval('question' + i) == answers[i - 1]) {
-            correct++
+            score++
+            // console.log('you got correct')
         } else {
-            wrongAnswer++;
+            wrong++;
+            //  console.log('you got wrong')
         }
     }
+    var parsedUrl = new URL(window.location.href);
+    console.log(parsedUrl.searchParams.get("wrong", "score")); // 123
 
-    document.write('You got ' + correct + ' correct answer(s) and ' + wrongAnswer + "wrong answer(s) and you didn't attempt " + unAnsweredQuestion + " questions.")
+    // score = encodeURIComponent(score);
+    // wrong = encodeURIComponent(wrong);
+    // empty = encodeURIComponent(empty);
+    // var string_url = '/result.html/?score=' + score + '&wrong=' + wrong + '&empty=' + empty;
+
+    // window.location.href = string_url;
 
 
-
-    // // document.getElementsByClassName('uk-input').style.visibility = 'visible';
-    // document.getElementById('correct').value = "You got " + correct + " correct.";
-    // document.getElementById('wrong').value = "You got " + wrongAnswer + " correct.";
-    // document.getElementById('empty').value = "You got " + unAnsweredQuestion + " correct.";
-
-    return false;
 }
