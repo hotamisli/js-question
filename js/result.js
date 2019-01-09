@@ -27,5 +27,13 @@ create a link, assign our URL as it’s href value, and then grab the search por
 // getParams(url);
 var parsedUrl = new URL(window.location.href);
 for (var pair of parsedUrl.searchParams.entries()) {
+    if (pair[0] == 'score') {
+        document.getElementById('score').value = pair[1];
+    } else if (pair[0] == 'wrong') {
+        document.getElementById('wrong').value = pair[1];
+    } else {
+        document.getElementById('empty').value = pair[1];
+    }
+
     console.log(pair[0] + " : " + pair[1]);
 }
